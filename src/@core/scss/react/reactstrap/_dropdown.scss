@@ -1,0 +1,59 @@
+// Component Dropdown
+// ========================================================================
+
+.dropdown-menu[data-popper-placement]:not([data-popper-placement^='top-']) {
+  top: 0.5rem !important;
+  margin: unset !important;
+}
+
+.dropdown-menu[data-popper-placement^='top-'] {
+  bottom: 0.5rem !important;
+  margin: unset !important;
+}
+
+// Navbar Dropdowns
+.dropdown-notification,
+.dropdown-cart {
+  .dropdown-menu {
+    left: inherit !important;
+  }
+}
+
+.dropdown-language {
+  .country-flag {
+    height: 18px !important;
+    width: 18px !important;
+  }
+
+  .dropdown-menu {
+    left: auto !important;
+  }
+}
+
+.dropdown-user {
+  .dropdown-menu {
+    left: auto !important;
+    right: 0;
+  }
+}
+
+// Global
+.dropdown-menu {
+  .dropdown-item:focus {
+    outline: 0;
+  }
+}
+
+// Dropdown Icon
+.dropdown-icon-wrapper {
+  .dropdown-toggle:after {
+    display: none;
+  }
+  .dropdown-menu {
+    min-width: auto;
+    .dropdown-item {
+      padding: 0.5rem 1.1rem;
+      cursor: pointer;
+    }
+  }
+}

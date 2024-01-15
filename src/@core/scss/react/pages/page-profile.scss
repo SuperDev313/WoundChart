@@ -1,0 +1,33 @@
+// Profile
+// =======================================================================
+@import '../../base/bootstrap-extended/include';
+@import '../../base/pages/page-profile';
+
+#user-profile {
+  .profile-load-more {
+    position: relative;
+    overflow: hidden;
+    .ui-loader {
+      position: unset;
+      .overlay {
+        left: 0;
+      }
+      .loader {
+        top: 50%;
+      }
+      .spinner-border {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  // navbar tabs pills
+  .profile-header-nav {
+    .profile-tabs {
+      margin-left: 11.1rem;
+    }
+  }
+}

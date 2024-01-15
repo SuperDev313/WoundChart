@@ -1,0 +1,8 @@
+@import '../../base/pages/modal-create-app.scss';
+
+.bs-stepper.create-app-wizard {
+  .bs-stepper-header .step .step-trigger {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+}

@@ -1,0 +1,150 @@
+@import '../../../base/bootstrap-extended/include';
+@import '../../../base/components/include';
+@import '../../../base/core/colors/palette-variables';
+
+.rc-input-number {
+  width: 7rem;
+  position: relative;
+
+  // ** Handle Wrapper
+  .rc-input-number-handler-wrap {
+    z-index: 1;
+    width: 100%;
+    top: 0.35rem;
+    display: flex;
+    position: absolute;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    .rc-input-number-handler {
+      width: 20px;
+      height: 20px;
+      color: $white;
+      text-align: center;
+      background-color: $primary;
+      border-radius: $border-radius;
+      svg {
+        top: -2px;
+        width: 0.8rem;
+        height: 0.8rem;
+        position: relative;
+      }
+      &.rc-input-number-handler-up-disabled,
+      &.rc-input-number-handler-down-disabled {
+        background-color: rgba(34, 41, 47, 0.5);
+      }
+    }
+  }
+
+  // ** Input Wrapper
+  .rc-input-number-input-wrap {
+    input {
+      border: 0;
+      width: 79%;
+      padding: 5px;
+      left: 0.75rem;
+      color: $body-color;
+      position: relative;
+      text-align: center;
+      background-color: $body-bg;
+      border-radius: $border-radius;
+    }
+  }
+
+  // ** States
+  &.rc-input-number-focused {
+    input {
+      outline: 0;
+    }
+  }
+
+  &.rc-input-number-disabled {
+    cursor: default;
+    .rc-input-number-handler-wrap {
+      .rc-input-number-handler {
+        opacity: 0.5;
+        cursor: default;
+        background-color: rgba(34, 41, 47, 0.5);
+      }
+    }
+  }
+
+  // ** Size lg
+  &.input-lg {
+    width: 9.375rem;
+    .rc-input-number-handler {
+      width: 24px;
+      height: 24px;
+      svg {
+        top: 1px;
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+    .rc-input-number-input-wrap {
+      input {
+        width: 82%;
+        left: 0.85rem;
+        font-size: 1.143rem;
+      }
+    }
+  }
+
+  &.cart-input {
+    width: 5.5rem;
+    height: 2.15rem;
+
+    .rc-input-number-input-wrap {
+      input {
+        left: 0.2rem;
+      }
+    }
+  }
+
+  // ** Colors
+  @each $color_name, $color in $colors {
+    @each $color_type, $color_value in $color {
+      @if $color_type== 'base' {
+        &.input-#{$color_name} {
+          .rc-input-number-handler {
+            background-color: $color_value;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Dark Layout
+.dark-layout {
+  .rc-input-number {
+    // ** Handle Wrapper
+    .rc-input-number-handler-wrap {
+      .rc-input-number-handler-up-disabled,
+      .rc-input-number-handler-down-disabled {
+        background-color: $gray-600;
+      }
+    }
+    // ** Input Wrapper
+    .rc-input-number-input-wrap {
+      input {
+        color: $theme-dark-body-color;
+        background-color: $theme-dark-body-bg;
+      }
+    }
+    &.rc-input-number-disabled {
+      .rc-input-number-handler-wrap {
+        .rc-input-number-handler {
+          opacity: 1;
+          background-color: $gray-600;
+        }
+      }
+
+      .rc-input-number-input-wrap {
+        input {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}

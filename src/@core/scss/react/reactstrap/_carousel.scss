@@ -1,0 +1,11 @@
+// Component App Collapse
+// ========================================================================
+
+html[dir='rtl'] {
+  .carousel {
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+      transform: rotate(180deg);
+    }
+  }
+}

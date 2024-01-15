@@ -1,0 +1,62 @@
+// Component Input
+// ========================================================================
+
+.form-control[readonly] {
+  opacity: 0.5;
+}
+
+.is-invalid {
+  border-color: $danger !important;
+}
+
+select.form-control[multiple] {
+  background-image: none !important;
+}
+
+.input-group {
+  .form-control.is-invalid ~ .input-group-append .input-group-text {
+    border-color: $danger;
+  }
+  &.is-invalid {
+    .form-control,
+    .input-group-append .input-group-text,
+    .input-group-prepend .input-group-text {
+      border-color: $danger !important;
+    }
+  }
+
+  & > .dropdown:nth-last-child(n + 3),
+  & > .dropdown:first-child {
+    .dropdown-toggle {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  & > .dropdown:not(:first-child) {
+    .dropdown-toggle {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}
+
+// ** Input type File style overriding
+/*! rtl:begin:ignore */
+.form-control::-webkit-file-upload-button {
+  margin-inline-end: 0.75rem !important;
+  border-inline-end-width: 1px !important;
+}
+/*! rtl:end:ignore */
+
+// ** Label styling of Checkbox, Radio and Switch
+.form-check-label.form-label {
+  margin-bottom: 0;
+  color: $body-color;
+  font-size: $font-size-base;
+}
+.dark-layout {
+  .form-check-label.form-label {
+    color: $theme-dark-label-color;
+  }
+}

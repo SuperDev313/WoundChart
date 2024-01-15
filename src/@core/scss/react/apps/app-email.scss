@@ -1,0 +1,44 @@
+// App Email
+// ========================================================================
+
+@import '../../base/pages/app-email.scss';
+
+// For editor height
+.email-application {
+  #message-editor .rdw-editor-main {
+    min-height: 17.9rem;
+  }
+}
+
+// Dark Layout
+.dark-layout {
+  .email-application {
+    .email-app-menu {
+      .list-group-item {
+        &.list-group-item-action:not(.active):not(:active) {
+          border-color: transparent;
+        }
+        &:not(.active):not(:active):focus {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+html[dir='rtl'] {
+  .email-application {
+    .email-app-details .email-detail-header {
+      .email-header-left .go-back svg,
+      .email-header-right .email-prev svg,
+      .email-header-right .email-next svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    .toggle-cc.me-1 {
+      margin-right: 1rem;
+      margin-left: 0 !important;
+    }
+  }
+}

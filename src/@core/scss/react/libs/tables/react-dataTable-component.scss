@@ -1,0 +1,227 @@
+@import '../../../base/bootstrap-extended/include';
+@import '../../../base/components/include';
+
+.react-dataTable {
+  border-radius: 0;
+  z-index: 0;
+  .rdt_TableHead {
+    .rdt_TableHeadRow {
+      background-color: $table-head-bg;
+      border-top: 1px solid;
+      border-color: $border-color;
+      min-height: 0;
+      height: 38px;
+
+      .rdt_TableCol {
+        padding: 0.72rem 1.5rem;
+        .rdt_TableCol_Sortable {
+          color: $body-color;
+          font-weight: bold;
+          font-style: 0.857rem;
+          letter-spacing: 0.5px;
+          text-transform: uppercase;
+          &:hover {
+            opacity: 1;
+          }
+          span {
+            margin-left: 0.35rem;
+          }
+        }
+        &:first-child {
+          .form-check {
+            transform: translateX(-10px);
+          }
+        }
+      }
+    }
+  }
+
+  .rdt_TableBody {
+    .rdt_TableRow {
+      color: $body-color;
+      .rdt_TableCell {
+        height: 53px;
+        padding: 0.72rem 1.5rem;
+
+        .column-action {
+          svg {
+            stroke: $body-color;
+          }
+
+          .dropdown-item:hover {
+            svg {
+              stroke: $primary;
+            }
+          }
+
+          .dropdown-item:active {
+            svg {
+              stroke: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .react-paginate {
+    &.separated-pagination {
+      .page-item:first-child .page-link,
+      .page-item:last-child .page-link {
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &.roles-table {
+    .rdt_TableHead .rdt_TableHeadRow .rdt_TableCol:first-child .form-check {
+      transform: translateX(0);
+    }
+    .rdt_TableBody .rdt_TableRow .rdt_TableCell:first-child .form-check {
+      transform: translateX(10px);
+    }
+  }
+
+  &.react-dataTable-selectable-rows {
+    .rdt_TableHead {
+      .rdt_TableHeadRow {
+        .rdt_TableCol:not(:first-child) {
+          padding-left: 0.2rem;
+        }
+      }
+    }
+  }
+}
+
+.permission-header {
+  @media (max-width: 740px) {
+    .add-permission {
+      margin-top: 1rem !important;
+    }
+  }
+}
+
+.rdt_Pagination {
+  select {
+    min-width: 30px;
+    &:focus,
+    &:active {
+      outline: 0;
+    }
+  }
+}
+
+.dataTable-filter {
+  max-width: 220px;
+}
+
+.dataTable-select {
+  width: 5rem;
+  &:not([multiple='multiple']) {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    background-position: calc(100% - 12px) 10px, calc(100% - 20px) 12px, 100% 0;
+    background-size: 10px 10px, 10px 10px;
+  }
+}
+
+.dark-layout {
+  .app-user-list {
+    header {
+      background-color: $theme-dark-card-bg;
+    }
+  }
+
+  .react-dataTable {
+    .hlidmt {
+      background-color: $theme-dark-card-bg;
+    }
+    .khKjDK {
+      background-color: $theme-dark-card-bg;
+      color: $theme-dark-body-color;
+    }
+
+    .rdt_Table {
+      background: $theme-dark-table-header-bg;
+      color: $theme-dark-body-color;
+
+      & > div:first-child:not(.rdt_TableHead):not(.rdt_TableBody) {
+        color: $theme-dark-body-color;
+        background-color: $theme-dark-card-bg;
+      }
+    }
+    .rdt_TableHead {
+      .rdt_TableHeadRow {
+        background-color: $theme-dark-table-header-bg;
+        border-color: $theme-dark-border-color;
+        .rdt_TableCol {
+          color: $theme-dark-body-color;
+          div[role='button'] {
+            color: $theme-dark-body-color;
+          }
+        }
+        .rdt_TableCol_Sortable {
+          color: $theme-dark-headings-color;
+
+          svg {
+            stroke: $theme-dark-headings-color;
+          }
+        }
+      }
+    }
+    .rdt_TableBody {
+      .expandable-content {
+        background-color: $theme-dark-table-bg;
+        color: $theme-dark-body-color;
+      }
+      .rdt_TableRow {
+        background-color: $theme-dark-table-bg;
+        color: $theme-dark-body-color;
+        border-color: $theme-dark-border-color;
+        .rdt_TableCell {
+          color: $theme-dark-body-color;
+          .column-action {
+            svg {
+              stroke: $theme-dark-body-color;
+            }
+          }
+        }
+        button {
+          &:hover:not(:disabled) {
+            background-color: $theme-dark-body-bg;
+          }
+          svg {
+            color: $theme-dark-body-color;
+          }
+        }
+        .permissions-actions {
+          button:hover {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+    .rdt_Pagination {
+      color: $theme-dark-body-color;
+      border-color: $theme-dark-border-color;
+      background-color: $theme-dark-table-bg;
+
+      svg {
+        fill: $theme-dark-body-color;
+      }
+    }
+  }
+
+  .rdt_Pagination {
+    color: $theme-dark-body-color;
+    background-color: $theme-dark-card-bg;
+    button {
+      svg {
+        fill: $theme-dark-body-color;
+      }
+      &[disabled] svg {
+        fill: $theme-dark-text-muted-color;
+      }
+    }
+  }
+}

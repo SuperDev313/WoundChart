@@ -1,0 +1,10 @@
+@import '../../../base/bootstrap-extended/include';
+@import '../../../base/components/include';
+@import '../../../base/plugins/extensions/ext-component-drag-drop.scss';
+
+// RTL
+html[dir='rtl'] {
+  .sortable-row {
+    flex-direction: row-reverse;
+  }
+}

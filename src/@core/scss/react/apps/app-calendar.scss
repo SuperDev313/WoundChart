@@ -1,0 +1,52 @@
+// App Calendar
+// ========================================================================
+@import '../../base/pages/app-calendar.scss';
+
+.event-sidebar {
+  .badge:empty {
+    display: inline-block;
+  }
+  .react-select {
+    z-index: 2;
+  }
+}
+
+html[dir='rtl'] {
+  .fc {
+    // &.fc-direction-rtl {
+    //   direction: rtl;
+    //   text-align: right;
+    // }
+    .fc-header-toolbar {
+      .fc-prev-button,
+      .fc-next-button {
+        transform: translate3d(0px, 2px, 0px) rotate(180deg) !important;
+      }
+    }
+    .fc-toolbar .fc-button-group {
+      .fc-dayGridMonth-button:first-child {
+        border-top-left-radius: $border-radius !important;
+        border-bottom-left-radius: $border-radius !important;
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+      }
+      .fc-listMonth-button:last-child {
+        border-top-right-radius: $border-radius !important;
+        border-bottom-right-radius: $border-radius !important;
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+      }
+    }
+    .fc-daygrid-event-harness-abs {
+      right: auto !important;
+      left: auto !important;
+    }
+
+    .fc-popover {
+      margin-right: 6.2rem;
+    }
+    .fc-daygrid-day-bottom {
+      text-align: right;
+    }
+  }
+}

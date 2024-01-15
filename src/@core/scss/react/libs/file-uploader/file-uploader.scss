@@ -1,0 +1,19 @@
+@import '../../../base/bootstrap-extended/include';
+@import '../../../base/components/include';
+
+.dropzone {
+  display: flex;
+  cursor: pointer;
+  min-height: 300px;
+  align-items: 'center';
+  justify-content: center;
+  background-color: $body-bg;
+  border: 1px dashed $primary;
+  border-radius: $border-radius;
+}
+
+.dark-layout {
+  .dropzone {
+    background-color: $theme-dark-body-bg;
+  }
+}

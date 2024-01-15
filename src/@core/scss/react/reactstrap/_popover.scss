@@ -1,0 +1,17 @@
+.popover {
+  &[data-popper-placement='right'] {
+    .arrow {
+      left: -7px;
+    }
+  }
+  &[data-popper-placement='left'] {
+    .arrow {
+      right: -7px;
+    }
+  }
+  &[data-popper-placement='bottom'] {
+    .arrow {
+      top: -7px;
+    }
+  }
+}

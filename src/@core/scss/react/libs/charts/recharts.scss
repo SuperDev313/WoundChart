@@ -1,0 +1,110 @@
+@import '../../../base/bootstrap-extended/include';
+@import '../../../base/components/include';
+
+.recharts-wrapper {
+  height: 350px;
+}
+
+// Tooltip
+.recharts-tooltip-wrapper {
+  padding: 0.75rem;
+  background-color: $white;
+  border-radius: 5px;
+  border: 1px solid $border-color;
+  box-shadow: 2px 2px 6px -4px #999;
+}
+
+// Grid Color
+.recharts-cartesian-grid,
+.recharts-polar-grid-angle,
+.recharts-yAxis,
+.recharts-xAxis {
+  line {
+    stroke: $border-color;
+  }
+}
+
+.recharts-polar-grid-concentric {
+  .recharts-polar-grid-concentric-polygon {
+    stroke: $border-color;
+  }
+}
+
+.recharts-polar-radius-axis-line {
+  stroke: $border-color;
+}
+
+.recharts-cartesian-axis-tick-value tspan,
+.recharts-polar-angle-axis-tick-value tspan {
+  font-size: 0.85rem;
+  color: $body-color;
+}
+
+// Vertical Tooltip Line
+.recharts-curve.recharts-tooltip-cursor {
+  display: none;
+}
+.recharts-wrapper.bar-chart {
+  .recharts-tooltip-cursor {
+    fill: transparent;
+  }
+}
+
+// Dark Layout
+.dark-layout {
+  // Tooltip
+  .recharts-tooltip-wrapper {
+    padding: 0.75rem;
+    background-color: $theme-dark-card-bg;
+    border-radius: 5px;
+    border: 1px solid $theme-dark-border-color;
+    box-shadow: $theme-dark-box-shadow;
+  }
+
+  // Grid Color
+  .recharts-cartesian-grid,
+  .recharts-polar-grid-angle,
+  .recharts-yAxis,
+  .recharts-xAxis {
+    line {
+      stroke: $theme-dark-border-color;
+    }
+  }
+
+  .recharts-polar-grid-concentric {
+    .recharts-polar-grid-concentric-polygon {
+      stroke: $theme-dark-border-color;
+    }
+  }
+
+  .recharts-polar-radius-axis-line {
+    stroke: $theme-dark-border-color;
+  }
+
+  .recharts-cartesian-axis-line,
+  .recharts-cartesian-axis-tick-line {
+    display: none;
+  }
+
+  .recharts-sector.recharts-radial-bar-background-sector {
+    fill: $theme-dark-body-bg;
+  }
+
+  text {
+    fill: $white;
+  }
+  .recharts-sector {
+    stroke: transparent;
+  }
+}
+
+html[dir='rtl'] {
+  .recharts-wrapper {
+    direction: rtl;
+  }
+  .recharts-yAxis {
+    .recharts-text {
+      text-anchor: start;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.btn {
+  &[class*='btn-gradient'],
+  &[class*='btn-relief'] {
+    &:first-child:active {
+      color: $white;
+    }
+  }
+  &[class*='btn-flat']:active {
+    color: 'inherit';
+    border-color: transparent;
+  }
+}

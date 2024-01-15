@@ -1,0 +1,100 @@
+@import '../../base/bootstrap-extended/include';
+@import '../../base/components/include';
+
+// Kanban App
+// ========================================================================
+
+.kanban-application {
+  overflow: auto !important;
+  .app-kanban-wrapper {
+    width: 100%;
+    display: flex;
+    overflow: auto !important;
+    .board-wrapper {
+      min-width: 260px;
+      .more-options-dropdown {
+        .btn-icon {
+          padding-right: 0;
+        }
+      }
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+
+      .board-header {
+        input.board-title {
+          border: 0;
+          font-weight: 500;
+          font-size: 1.1rem;
+          white-space: nowrap;
+          background-color: transparent;
+
+          &:hover,
+          &:focus {
+            background-color: $white;
+          }
+        }
+      }
+
+      .task {
+        cursor: grab;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+        .card-body {
+          padding: 1rem 1.2rem;
+        }
+
+        .task-title {
+          display: block;
+          font-weight: 500;
+        }
+
+        .task-img {
+          width: 100%;
+          height: 100%;
+          max-width: 260px;
+          object-fit: cover;
+        }
+
+        .task-footer {
+          .avatar img {
+            width: 28px;
+            height: 28px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sidebar-kanban-modal {
+  .modal-body {
+    height: calc(100vh - 9rem);
+  }
+  .dropzone {
+    position: relative;
+    .single-file-image {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      border-radius: $border-radius;
+    }
+  }
+}
+
+.dark-layout {
+  .kanban-application {
+    .app-kanban-wrapper {
+      .board-header {
+        input.board-title {
+          color: $white;
+          &:hover {
+            background-color: $theme-dark-card-bg;
+          }
+        }
+      }
+    }
+  }
+}

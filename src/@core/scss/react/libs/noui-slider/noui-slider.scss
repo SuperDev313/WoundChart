@@ -1,0 +1,35 @@
+@import '~nouislider/dist/nouislider.css';
+@import '../../../base/plugins/extensions/ext-component-sliders.scss';
+@import '../../../base/core/colors/palette-noui';
+
+.noUi-vertical .noUi-origin {
+  top: 0;
+}
+
+.noUi-horizontal {
+  .noUi-origin {
+    .noUi-handle {
+      right: -10px;
+    }
+  }
+}
+
+html[dir='rtl'] .noUi-horizontal {
+  .noUi-origin {
+    left: auto !important;
+    right: 0 !important;
+    .noUi-handle {
+      right: unset;
+      left: -0.5rem;
+    }
+  }
+  .noUi-connects {
+    .noUi-connect {
+      left: -0.5rem;
+      transform-origin: 0;
+    }
+  }
+  .noUi-value-horizontal {
+    transform: translate(-50%, 50%);
+  }
+}

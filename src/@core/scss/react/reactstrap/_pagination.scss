@@ -1,0 +1,43 @@
+// Component Pagination
+// ========================================================================
+.pagination {
+  &.react-paginate {
+    .page-link {
+      transition: all 0.05s ease-in-out;
+    }
+
+    .page-item.prev,
+    .page-item.next {
+      a.page-link:before,
+      a.page-link:after {
+        height: 16.83px;
+        margin-top: 1px;
+      }
+    }
+    &.pagination-sm {
+      .page-item.prev,
+      .page-item.next {
+        a.page-link:before,
+        a.page-link:after {
+          height: 14.5px;
+        }
+      }
+    }
+    &.pagination-lg {
+      .page-item.prev,
+      .page-item.next {
+        a.page-link:before,
+        a.page-link:after {
+          height: 19.5px;
+        }
+      }
+    }
+  }
+
+  &.no-navigation {
+    li:first-of-type,
+    li:last-of-type {
+      display: none;
+    }
+  }
+}

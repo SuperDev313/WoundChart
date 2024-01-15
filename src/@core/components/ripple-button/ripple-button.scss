@@ -1,0 +1,36 @@
+// Component: Ripple Button
+// ========================================================================
+
+@import '../../scss/base/bootstrap-extended/include';
+@import '../../scss/base/components/include';
+
+.waves-effect {
+  position: relative;
+  overflow: hidden;
+  .waves-ripple {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba($color: $white, $alpha: 0.2);
+    animation: ripple-effect 0.7s ease;
+  }
+}
+
+@keyframes ripple-effect {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    width: 200%;
+    padding-bottom: 200%;
+    opacity: 0;
+  }
+}

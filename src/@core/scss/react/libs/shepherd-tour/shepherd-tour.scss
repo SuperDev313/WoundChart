@@ -1,0 +1,11 @@
+@import '../../../base/plugins/extensions/ext-component-tour.scss';
+
+.shepherd-element {
+  .shepherd-content {
+    .shepherd-button {
+      background: inherit;
+      color: $primary;
+      border-radius: $btn-border-radius;
+    }
+  }
+}

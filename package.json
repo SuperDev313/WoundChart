@@ -1,0 +1,165 @@
+{
+  "name": "vuexy-react-admin-dashboard",
+  "version": "9.0.0",
+  "private": true,
+  "dependencies": {
+    "@casl/ability": "^6.3.2",
+    "@casl/react": "^3.1.0",
+    "@esbuild-plugins/node-globals-polyfill": "^0.1.1",
+    "@fullcalendar/core": "^5.11.0",
+    "@fullcalendar/daygrid": "^5.11.0",
+    "@fullcalendar/interaction": "^5.11.0",
+    "@fullcalendar/list": "^5.11.0",
+    "@fullcalendar/react": "^5.11.1",
+    "@fullcalendar/timegrid": "^5.11.0",
+    "@fullcalendar/timeline": "^5.11.0",
+    "@hookform/resolvers": "^3.1.0",
+    "@popperjs/core": "^2.11.3",
+    "@reduxjs/toolkit": "^1.2.5",
+    "animate.css": "4.1.1",
+    "apexcharts": "^3.35.2",
+    "apexcharts-clevision": "^3.28.5",
+    "axios": "^1.1.3",
+    "axios-mock-adapter": "^1.20.0",
+    "bootstrap": "^5.2.2",
+    "bootstrap-daterangepicker": "^3.1.0",
+    "bs-stepper": "1.7.0",
+    "chart.js": "^4.3.0",
+    "classnames": "^2.3.2",
+    "cleave.js": "1.6.0",
+    "crypto-browserify": "^3.12.0",
+    "draft-js": "0.11.7",
+    "draftjs-to-html": "0.9.1",
+    "events": "^3.3.0",
+    "file-saver": "^2.0.5",
+    "flatpickr": "^4.6.13",
+    "healthicons-react": "^1.3.0",
+    "history": "^5.3.0",
+    "html-to-draftjs": "1.5.0",
+    "i18next": "^22.0.5",
+    "i18next-browser-languagedetector": "^7.0.1",
+    "i18next-http-backend": "^2.0.1",
+    "jquery": "^3.6.0",
+    "jsonwebtoken": "8.5.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "nouislider": "^15.5.0",
+    "nouislider-react": "^3.4.1",
+    "postcss": "7.0.33",
+    "postcss-custom-properties": "^12.1.10",
+    "postcss-import": "12.0.0",
+    "postcss-rtl": "^1.5.0",
+    "prismjs": "^1.28.0",
+    "process": "^0.11.10",
+    "rc-input-number": "^7.3.11",
+    "react": "^18.2.0",
+    "react-apexcharts": "^1.4.0",
+    "react-bootstrap-daterangepicker": "^8.0.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-country-flag": "^3.0.2",
+    "react-data-table-component": "^7.5.2",
+    "react-datetime": "^3.2.0",
+    "react-dom": "^18.2.0",
+    "react-draft-wysiwyg": "^1.14.7",
+    "react-dropzone": "^14.2.1",
+    "react-feather": "~2.0.3",
+    "react-flatpickr": "^3.10.12",
+    "react-hook-form": "^7.43.9",
+    "react-hot-toast": "^2.4.0",
+    "react-i18next": "^12.0.0",
+    "react-icons": "^4.10.1",
+    "react-lightgallery": "^0.9.0",
+    "react-paginate": "^8.1.3",
+    "react-perfect-scrollbar": "^1.5.8",
+    "react-rating": "2.0.5",
+    "react-redux": "^8.0.1",
+    "react-router-dom": "^6.3.0",
+    "react-select": "^5.6.1",
+    "react-shepherd": "^4.1.0",
+    "react-signature-canvas": "^1.0.6",
+    "react-slidedown": "^2.4.7",
+    "react-sortablejs": "6.0.0",
+    "reactstrap": "^9.1.5",
+    "recharts": "^2.1.9",
+    "redux": "^4.2.0",
+    "redux-debounced": "0.5.0",
+    "redux-thunk": "^2.4.1",
+    "rollup-plugin-node-polyfills": "^0.2.1",
+    "sass": "^1.51.0",
+    "screenfull": "^6.0.2",
+    "sortablejs": "^1.12.0",
+    "stream-browserify": "^3.0.0",
+    "styled-components": "^5.3.5",
+    "sweetalert2": "^11.4.14",
+    "sweetalert2-react-content": "^5.0.0",
+    "swiper": "^8.1.5",
+    "wnumb": "1.2.0",
+    "xlsx": "^0.18.5",
+    "yup": "^1.1.1"
+  },
+  "scripts": {
+    "start": "vite",
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --write \"src/**/*.js\"",
+    "lint": "eslint src/**/*.js src/**/*.js",
+    "lint:fix": "eslint src/**/*.js --fix"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "resolutions": {
+    "sass-loader/webpack": "^5.0.0",
+    "recharts/prop-types": "^15.6.0",
+    "styled-components/react-is": "^16.8.0",
+    "react-hot-toast/goober/csstype": "^3.0.10",
+    "html-to-draftjs/immutable": "^4.0.0",
+    "postcss-custom-properties/postcss": "^8.2",
+    "@esbuild-plugins/node-globals-polyfill/esbuild": "^0.15.15"
+  },
+  "overrides": {
+    "sass-loader": {
+      "webpack": "^5.0.0"
+    },
+    "recharts": {
+      "prop-types": "^15.6.0"
+    },
+    "styled-components": {
+      "react-is": "^16.8.0"
+    },
+    "react-hot-toast": {
+      "goober": {
+        "csstype": "^3.0.10"
+      }
+    },
+    "html-to-draftjs": {
+      "immutable": "^4.0.0"
+    },
+    "postcss-custom-properties": {
+      "postcss": "^8.2"
+    },
+    "@esbuild-plugins/node-globals-polyfill": {
+      "esbuild": "^0.15.15"
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.6",
+    "@babel/eslint-parser": "^7.18.2",
+    "@babel/preset-react": "^7.18.6",
+    "@types/sortablejs": "^1.10.6",
+    "@vitejs/plugin-react": "2.2.0",
+    "eslint": "^8.19.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-react": "^7.29.4",
+    "prettier": "^2.6.2",
+    "sass-loader": "^13.1.0",
+    "vite": "^3.2.4"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ]
+}

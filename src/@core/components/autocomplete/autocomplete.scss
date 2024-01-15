@@ -1,0 +1,86 @@
+// Component: Autocomplete
+// ========================================================================
+
+// ** Base Styles Imports
+@import '../../scss/base/bootstrap-extended/include';
+@import '../../scss/base/components/include';
+
+$autocomplete-active-color: #f1f1f1;
+
+.autocomplete-container {
+  position: relative;
+  .autocomplete-search {
+    height: 100%;
+    width: 100%;
+    background-color: $white;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  .suggestions-list {
+    z-index: 998;
+    list-style: none;
+    padding-left: 0;
+    border-radius: 0.5rem;
+    max-height: 450px;
+    height: auto;
+    width: 100%;
+    position: absolute;
+    margin-top: 0.5rem;
+    list-style-type: none;
+    background-color: $white;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11), 0 5px 15px 0 rgba(0, 0, 0, 0.08);
+    .suggestion-item {
+      padding: 0.9rem 1rem;
+      color: $body-color;
+      line-height: 1 !important;
+      a {
+        color: $body-color;
+      }
+      &.suggestion-title {
+        font-size: 0.85rem;
+        color: $text-muted;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        margin-top: 0.75rem;
+        margin-bottom: 0;
+      }
+      &.active,
+      &:hover:not(.suggestion-title-wrapper):not(.no-result) {
+        background-color: $autocomplete-active-color;
+        color: $body-color;
+      }
+
+      &:hover:not(.suggestion-title-wrapper):not(.no-result) {
+        cursor: pointer;
+      }
+    }
+    &.open-up {
+      top: auto;
+      bottom: 100%;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+// Dark
+.dark-layout {
+  .autocomplete-container {
+    .suggestions-list {
+      background-color: $theme-dark-card-bg;
+      .suggestion-item {
+        color: $theme-dark-body-color !important;
+        &.suggestion-title-wrapper {
+          color: $theme-dark-text-muted-color;
+        }
+        &:not(.suggestion-title-wrapper) {
+          &.active,
+          &:hover {
+            background-color: $theme-dark-body-bg !important;
+          }
+        }
+      }
+    }
+  }
+}

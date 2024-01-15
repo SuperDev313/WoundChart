@@ -1,0 +1,30 @@
+@import '../../../base/plugins/charts/chart-apex.scss';
+
+.apex-charts-heatmap {
+  .apexcharts-legend-text {
+    margin-top: 0.5rem;
+  }
+}
+
+.apexcharts-canvas .apexcharts-legend-series .apexcharts-legend-text {
+  margin-left: -10px;
+}
+
+.dark-layout {
+  .apexcharts-gridlines-vertical line {
+    stroke: $theme-dark-border-color;
+  }
+}
+
+[dir='rtl'] {
+  .apexcharts-canvas {
+    .apexcharts-yaxis text {
+      text-anchor: end;
+    }
+    .apexcharts-legend-series {
+      .apexcharts-legend-text {
+        margin-right: 10px;
+      }
+    }
+  }
+}

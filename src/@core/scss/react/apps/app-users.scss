@@ -1,0 +1,19 @@
+@import '../../base/bootstrap-extended/include';
+@import '../../base/components/include';
+
+// Users App
+// ========================================================================
+
+// User View: Project list table in Account tab
+.user-view-account-projects {
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+}
+
+.app-user-list {
+  @media (max-width: 647px) {
+    .table-header-actions {
+      margin-top: 1rem;
+    }
+  }
+}

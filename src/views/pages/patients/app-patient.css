@@ -1,0 +1,12 @@
+.patient-padding {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.custom-link {
+  text-decoration: none;
+  color: inherit; /* Keep the original text color */
+  cursor: pointer;
+}
+
+

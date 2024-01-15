@@ -1,0 +1,17 @@
+// Component Toast
+// ========================================================================
+
+.dark-layout {
+  .card {
+    .toast {
+      background-color: rgba($color: $theme-dark-body-bg, $alpha: 0.85);
+      .toast-header {
+        background-color: $theme-dark-body-bg;
+
+        .close {
+          color: $theme-dark-body-color;
+        }
+      }
+    }
+  }
+}

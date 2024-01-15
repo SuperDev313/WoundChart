@@ -1,0 +1,20 @@
+@import '../../../base/bootstrap-extended/include';
+@import '../../../base/components/include';
+@import '../../../base/core/colors/palette-variables';
+
+.react-hot-toast {
+  font-size: 1rem;
+  color: $body-color;
+  letter-spacing: 0.14px;
+  box-shadow: 0px 4px 10px -4px rgb(58 53 65 / 60%);
+  border-radius: $border-radius;
+}
+
+// Dark Layout
+.dark-layout {
+  .react-hot-toast {
+    color: $theme-dark-body-color;
+    background: $theme-dark-card-bg;
+    box-shadow: 0px 8px 16px -4px rgb(19 17 32 / 65%);
+  }
+}

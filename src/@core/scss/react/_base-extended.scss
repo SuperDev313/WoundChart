@@ -1,0 +1,252 @@
+// Layout
+// ========================================================================
+body,
+#root,
+.wrapper {
+  height: 100%;
+}
+
+// Vertical Menu
+// ========================================================================
+.vertical-layout .main-menu {
+  &.expanded {
+    .navigation {
+      li:not(.open) {
+        & > ul {
+          display: block !important;
+        }
+      }
+    }
+  }
+  .navigation {
+    li:not(.open) {
+      a {
+        &:after {
+          transform: rotate(0deg) !important;
+        }
+      }
+    }
+    a.active {
+      z-index: 1;
+      background: linear-gradient(118deg, rgba($primary, 1), rgba($primary, 0.7));
+      box-shadow: 0 0 10px 1px rgba($primary, 0.7);
+      color: $white;
+      font-weight: 400;
+      border-radius: 4px;
+    }
+
+    li.nav-item {
+      .menu-item {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+body #root .wrapper .ps__rail-y {
+  left: auto !important ;
+  right: 1px !important;
+}
+
+// Profile Dropdown (Common)
+// ========================================================================
+.vertical-layout,
+.horizontal-layout {
+  .header-navbar:not(.navbar-horizontal) .navbar-container ul.navbar-nav {
+    li.dropdown {
+      .dropdown-menu {
+        top: 3.5rem !important;
+      }
+      &.dropdown-user {
+        .dropdown-menu {
+          top: 4rem !important;
+        }
+      }
+    }
+  }
+}
+
+// Horizontal Menu
+// ========================================================================
+.horizontal-layout {
+  &.navbar-static .header-navbar.navbar-scrolled {
+    background-color: $white;
+    box-shadow: rgba($black, 0.05) 0px 4px 20px 0px;
+  }
+
+  // Main Navbar
+  .header-navbar {
+    .navbar-container {
+      .dropdown-language,
+      .dropdown-cart,
+      .dropdown-notification,
+      .dropdown-user {
+        .dropdown-menu {
+          top: 3rem !important;
+        }
+      }
+    }
+  }
+
+  // Menu
+  .horizontal-menu-wrapper {
+    #main-menu-navigation {
+      .dropdown {
+        .dropdown-menu.first-level {
+          top: 4.6rem !important;
+        }
+        .dropdown-submenu {
+          &.sidebar-group-active.active {
+            .dropdown-toggle {
+              color: $body-color;
+            }
+          }
+          .dropdown-toggle:after {
+            margin-top: -5px;
+          }
+        }
+
+        .dropdown-item.active {
+          color: $primary !important;
+          background-color: $body-bg !important;
+        }
+      }
+      .nav-item:not(.dropdown):not(.dropdown-submenu) {
+        a.nav-link.active {
+          background: linear-gradient(118deg, rgba($primary, 1), rgba($primary, 0.7));
+          box-shadow: 0 0 6px 1px rgba($primary, 0.6);
+          color: $white;
+          border-radius: 4px;
+        }
+      }
+    }
+
+    .navbar-horizontal {
+      ul.dropdown-menu {
+        .nav-item.active > a {
+          border-bottom: none;
+        }
+
+        // Scrollbar styles
+        &::-webkit-scrollbar {
+          width: 5px;
+          height: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: $gray-500;
+          border-radius: 20px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: $gray-300;
+          border-radius: 30px;
+        }
+      }
+    }
+  }
+}
+
+// Layout BreadCrumbs
+// =======================================================================
+.content-header {
+  .content-header-title {
+    font-weight: 500;
+    color: $gray-400;
+    padding-right: $spacer;
+    border-right: 1px solid lighten($gray-600, 10%);
+  }
+  .content-header-right {
+    .dropdown-toggle:after {
+      display: none;
+    }
+  }
+}
+
+// Bookmarks search
+// ========================================================================
+.header-navbar .navbar-container {
+  .navbar-nav {
+    .autocomplete-container .suggestion-item span {
+      line-height: 1.2;
+    }
+  }
+}
+
+// Component Code
+// ========================================================================
+.card-snippet {
+  pre {
+    margin-top: 0;
+    border-radius: 0.5rem;
+  }
+}
+
+// Dashboard Analytics
+// =======================================================================
+
+.card-congratulations {
+  .avatar svg {
+    height: 28px !important;
+    width: 28px !important;
+  }
+}
+
+// Card Analytics
+// =======================================================================
+.avg-session-progress {
+  height: 6px;
+}
+
+// Block UI
+// ========================================================================
+.block-ui-container {
+  .block-ui-overlay {
+    background: rgba($black, 0.6);
+  }
+}
+
+// React SlideDown
+// ========================================================================
+.react-slidedown {
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+}
+
+// Router Transitions
+// ========================================================================
+.animate__animated.animate__zoomIn,
+.animate__animated.animate__fadeInLeft {
+  --animate-duration: 1s;
+}
+
+// App Ecommerce
+// ========================================================================
+.ecommerce-application {
+  .content-wrapper.animate__animated {
+    animation: none;
+  }
+}
+
+// Customizer
+// ========================================================================
+.customizer {
+  .react-select {
+    width: 100%;
+    max-width: 200px;
+
+    .select__menu {
+      z-index: 2;
+    }
+  }
+}
+
+// Media Query to fix navbar dropdown on sm screen
+@media (max-width: 576px) {
+  .header-navbar .navbar-container .dropdown.show .dropdown-menu {
+    width: auto;
+    left: 0 !important;
+  }
+}

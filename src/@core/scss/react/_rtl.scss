@@ -1,0 +1,273 @@
+html[dir='rtl'] {
+  body .ps__rail-y {
+    right: auto !important;
+    left: 1px !important;
+  }
+
+  // RTL Icons
+  .rotate-rtl {
+    transform: rotate(-180deg);
+  }
+
+  // Scroll To Top
+  .scroll-to-top {
+    div:first-of-type {
+      left: auto !important;
+      right: 30px;
+    }
+  }
+
+  // Vertical Menu Item Arrows
+  .vertical-layout .main-menu .navigation li.has-sub {
+    > a:after {
+      transform: rotate(90deg) !important;
+    }
+    &:not(.open) {
+      > a:after {
+        transform: rotate(180deg) !important;
+      }
+    }
+  }
+
+  // Horizontal menu
+  .horizontal-menu .header-navbar.navbar-horizontal .dropdown-menu .dropdown-toggle::after {
+    background-image: url(str-replace(str-replace($chevron-left, 'currentColor', $body-color), '#', '%23'));
+  }
+
+  // Dropdown RTL Changes
+  .dropdown,
+  .dropup,
+  .btn-group {
+    .dropdown-menu {
+      right: auto !important;
+      left: auto !important;
+
+      &.dropdown-menu-end {
+        left: 0 !important;
+
+        &::before {
+          right: 0.6rem;
+          left: auto;
+        }
+      }
+    }
+  }
+
+  .dropstart {
+    .dropdown-menu {
+      right: 0.5rem !important;
+      margin-right: $dropdown_spacing !important;
+    }
+  }
+
+  .dropend {
+    .dropdown-menu {
+      left: 0.5rem !important;
+      margin-left: $dropdown_spacing !important;
+    }
+  }
+
+  // Breadcrumbs
+  .breadcrumb:not([class*='breadcrumb-']),
+  .breadcrumb.breadcrumb-chevron {
+    .breadcrumb-item + .breadcrumb-item {
+      &:before {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  // Pagination
+  .pagination .page-item {
+    &.prev-item,
+    &.prev,
+    &.previous {
+      .page-link {
+        &:before {
+          transform: rotate(180deg);
+        }
+        &:hover,
+        &:active {
+          &:before {
+            transform: rotate(180deg);
+          }
+        }
+      }
+      &.disabled {
+        .page-link {
+          &:before {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+
+    &.next-item,
+    &.next {
+      .page-link {
+        &:after {
+          transform: rotate(180deg);
+        }
+        &:hover,
+        &:active {
+          &:after {
+            transform: rotate(180deg);
+          }
+        }
+      }
+      &.disabled {
+        .page-link {
+          &:before {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+    &:first-of-type,
+    &:last-of-type {
+      .page-link svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  // Popover
+  .popover {
+    &[data-popper-placement^='left'] {
+      .popover-arrow {
+        left: unset;
+        right: -0.5rem;
+        transform: translate3d(0px, 58px, 0px) !important;
+      }
+    }
+    &[data-popper-placement^='right'] {
+      .popover-arrow {
+        right: unset;
+        left: -0.5rem;
+        transform: translate3d(0px, 58px, 0px) !important;
+      }
+    }
+  }
+
+  // Tooltip
+  .bs-tooltip-left .arrow,
+  .bs-tooltip-auto[data-popper-placement^='left'] .arrow {
+    right: -1px;
+    transform: translate3d(0px, 15px, 0px) !important;
+  }
+
+  .bs-tooltip-right .arrow,
+  .bs-tooltip-auto[data-popper-placement^='right'] .arrow {
+    right: auto;
+    left: 0;
+    transform: translate3d(0px, 15px, 0px) !important;
+  }
+
+  // App Email
+  .email-application {
+    .toggle-cc.mr-1 {
+      margin-right: 0 !important;
+      margin-left: 1rem !important;
+    }
+  }
+
+  // App Calendar
+  .app-calendar {
+    .fc-toolbar {
+      flex-direction: row-reverse !important;
+      .fc-toolbar-chunk:first-child {
+        flex-direction: row-reverse;
+      }
+      .fc-prev-button,
+      .fc-next-button {
+        transform: translate3d(0px, 9px, 0px) rotate(180deg) !important;
+      }
+    }
+  }
+
+  // App Ecommerce
+  .app-ecommerce-details {
+    .swiper-button-next {
+      right: 0;
+      left: auto;
+    }
+  }
+
+  // Invoice List
+  .invoice-list-table-header {
+    select {
+      background-position: calc(100% - (100% - 13px)) 13px, calc(100% - (100% - 20px)) 13px, 0% 0 !important;
+    }
+  }
+
+  // TinyMCE
+  .tox-tinymce {
+    .tox-editor-header {
+      direction: ltr;
+    }
+  }
+
+  // Apex Charts
+  .apexcharts-canvas {
+    .apexcharts-tooltip {
+      .apexcharts-tooltip-marker {
+        margin-right: 10px;
+        margin-left: 0 !important;
+      }
+    }
+  }
+
+  // Swiper
+  .swiper-button-next {
+    right: 10px !important;
+    left: auto !important;
+  }
+
+  .swiper-button-prev {
+    left: 10px !important;
+    right: auto !important;
+  }
+
+  // Flatpickr
+  .flatpickr-calendar {
+    .flatpickr-months {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  // Wizard
+  .bs-stepper {
+    &:not(.vertical) {
+      .bs-stepper-header .line svg {
+        transform: rotate(180deg);
+      }
+    }
+    .btn-next svg,
+    .btn-prev svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  // Datatables
+  .rdt_Table {
+    [aria-label='Expand Row'] {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  #profile-info {
+    .post {
+      .post-actions {
+        .share-post {
+          span.mr-1 {
+            margin-right: 0 !important;
+          }
+        }
+      }
+    }
+  }
+}

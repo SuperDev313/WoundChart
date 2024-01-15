@@ -1,0 +1,127 @@
+@import '../base/bootstrap-extended/include';
+@import '../base/components/include';
+
+.dark-layout {
+  .bg-transparent.btn- {
+    svg {
+      color: $theme-dark-body-color;
+    }
+  }
+
+  // ** App Invoice
+  .invoice-edit,
+  .invoice-add {
+    .invoice-edit-input-group .input-group-text {
+      border-right-color: $theme-dark-card-bg !important;
+    }
+  }
+
+  .invoice-print {
+    .table {
+      th {
+        background-color: transparent !important;
+      }
+    }
+  }
+
+  // Autocomplete Navbar
+  .autocomplete-container {
+    .suggestions-list {
+      .suggestion-item {
+        &.suggestion-title-wrapper h6 {
+          color: $theme-dark-text-muted-color;
+        }
+      }
+    }
+  }
+
+  // Ecommerce Application
+  .ecommerce-application .list-view .ecommerce-card .card-body {
+    border-right-color: $theme-dark-border-color;
+  }
+
+  // Chat Application
+  .chat-application {
+    .more-options-dropdown .btn-icon svg {
+      color: $theme-dark-body-color;
+    }
+  }
+
+  // Pagination Break
+  .pagination {
+    .break {
+      background-color: $theme-dark-pagination-bg;
+      a {
+        color: $theme-dark-body-color;
+      }
+    }
+  }
+
+  // Invoice data table
+  .invoice-list-wrapper header {
+    background-color: $theme-dark-card-bg;
+  }
+
+  // BlockUI
+  .block-ui-container {
+    .block-ui-overlay {
+      background: $theme-dark-body-bg;
+    }
+    .block-ui-message {
+      color: $theme-dark-body-color;
+    }
+  }
+
+  // Pricing
+  .pricing-card .card.popular {
+    border-color: $primary !important;
+  }
+
+  // Form Control
+  .form-control {
+    background-color: transparent;
+  }
+  input.form-control.is-valid:not(:focus) {
+    border-color: $success;
+  }
+
+  // Apex Charts
+  .apexcharts-gridlines-vertical line {
+    stroke: $theme-dark-border-color;
+  }
+
+  .horizontal-layout {
+    &.navbar-static .header-navbar.navbar-scrolled {
+      background-color: $theme-dark-body-bg;
+    }
+  }
+
+  // Horizontal Menu Scrollbar
+  .horizontal-menu {
+    .horizontal-menu-wrapper {
+      .navbar-horizontal {
+        #main-menu-navigation {
+          .dropdown-submenu {
+            &.sidebar-group-active.active {
+              .dropdown-toggle {
+                color: $theme-dark-body-color !important;
+              }
+            }
+          }
+          .dropdown-item.active {
+            background-color: $theme-dark-body-bg !important;
+          }
+          ul.dropdown-menu {
+            &::-webkit-scrollbar-thumb {
+              background: $theme-dark-body-bg;
+            }
+
+            &::-webkit-scrollbar-track {
+              background: $theme-dark-border-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
